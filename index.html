@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 35" class="svg__icon"><g fill-rule="evenodd" clip-rule="evenodd"><path fill="#00ff99" d="M0 3h4v29H0z"></path><path fill="#9933ff" d="M24 11h4v21h-4z"></path><path fill="#00ccff" d="M0 31h28v4H0z"></path><path fill="#fff35c" d="M0 0h16v4H0z"></path><path fill="#ff6666" d="M24 8V4h-4V0h-4v12h12V8"></path><path class="shadow" d="M24 16v-4h4M16 0v4h-4"></path></g></svg>
+            <div class="navbar__logo-word">GIPHY API</div>
+        </div>
+        <div class="navbar__search">
+            <input type="text" id="searchInput" placeholder="Search GIFs" onkeypress="searchKeyPress(event)">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </div>
+    </nav>
+    <main class="gallery">
+        <!-- GIFs will be added here dynamically -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
