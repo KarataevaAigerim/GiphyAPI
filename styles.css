@@ -25,9 +25,7 @@ body, html {
 }
 
 .svg__icon {
-    display: block;
     height: 40px;
-    /* width: 21px; */
     margin-right: 10px;
     flex-shrink: 0;
 }
