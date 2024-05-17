@@ -17,6 +17,7 @@ body, html {
 .navbar__logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
 }
 .navbar__logo-word {
@@ -51,21 +52,17 @@ body, html {
 .navbar__search input:focus {
     outline: none;
 }
-.header #header__input {
-    width: 300px;
-    padding: 0.8rem 1.2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    color: darkblue;
-    border-radius: 50px;
-    border: none;
-    outline: none;
-}
 
-.navbar__search i {
+#nav__search {
     position: absolute;
-    right: 15px;
-    pointer-events: none; /* Makes the icon non-clickable */
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 100%;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
     color: #333;
 }
 
