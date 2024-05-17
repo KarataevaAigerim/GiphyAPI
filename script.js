@@ -6,6 +6,11 @@ function searchKeyPress(e) {
     }
 }
 
+function onSearchClick() {
+    const query = document.getElementById('searchInput').value;
+    fetchGifs(query);
+}
+
 function fetchGifs(query) {
     const apiKey = '768BSJJ7yudt7s9YuxYjZpjExQVm4xTu';
     const url = query ? 
