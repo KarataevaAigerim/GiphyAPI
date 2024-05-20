@@ -14,8 +14,8 @@ function onSearchClick() {
 function fetchGifs(query) {
     const apiKey = '768BSJJ7yudt7s9YuxYjZpjExQVm4xTu';
     const url = query ? 
-        `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=20` :
-        `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`;
+        `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=27` :
+        `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=27`;
 
     fetch(url)
         .then(response => response.json())
@@ -36,5 +36,5 @@ function displayGifs(gifs) {
     });
 }
 
-// Load trending GIFs initially
+// Load trending GIFs
 fetchGifs();

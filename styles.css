@@ -93,3 +93,124 @@ body, html {
     border-radius: 8px;
 }
 
+/* footer */
+.footer {
+    background-image: linear-gradient(45deg, #fa8bff 0%, #c667ff 25%, #2bd2ff 75%, #6aff6a 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__text{
+    font-size: 1.2rem;
+}
+.footer__link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+    }
+  }
+
+  /* Extra small devices */
+    @media (max-width: 576px) {
+        .gallery {
+        grid-template-columns: 1fr; /* 1 column */
+        }
+    }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns, more explicit */
+    }
+  }
+
+
+  @media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    /* Optional: If you have a menu toggle button */
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .navbar a {
+        padding: 10px 10px;  // Adjust padding for better fit
+    }
+    /* Adjust font size if necessary */
+    .navbar a {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 901px) {
+    .navbar {
+        /* Optional: Adjustments for very large screens */
+        padding: 10px 50px; // Increased padding for larger screens
+    }
+    .navbar a {
+        font-size: 16px; // Possibly increase font size
+    }
+}
+
+/* the search input for for phones */
+
+@media (max-width: 600px) {
+    /* Adjustments for the navbar logo */
+    .navbar__logo {
+        justify-content: center; /* Center logo if needed */
+        margin-bottom: 10px; /* Add some space below the logo if navbar becomes vertical */
+    }
+    .navbar__logo-word {
+        font-size: 1.5rem; /* Reduce the size of the font on smaller screens */
+    }
+    .svg__icon {
+        height: 30px; /* Reduce the size of the icon */
+        margin-right: 5px; /* Reduce space between icon and text */
+    }
+
+    /* Adjustments for the navbar search */
+    .navbar__search {
+        margin-top: 10px; /* Add margin top if navbar items are stacked */
+        width: 100%; /* Full width to utilize space */
+    }
+    .navbar__search input {
+        width: calc(100% - 40px); /* Adjust width to account for padding and button */
+        font-size: 0.9rem; /* Optionally adjust the font size */
+    }
+    #nav__search {
+        right: 10px; /* Adjust position of search icon/button within the search box */
+    }
+}
+
