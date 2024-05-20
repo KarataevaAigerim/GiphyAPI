@@ -1,9 +1,6 @@
-function searchKeyPress(e) {
-    if (e.keyCode === 13) {  // 13 is the enter key
-        e.preventDefault();  // Prevent the default action to avoid form submission
-        const query = document.getElementById('searchInput').value;
-        fetchGifs(query);  // Fetch GIFs based on the entered query
-    }
+
+function handleFormSubmit() {
+    onSearchClick();
 }
 
 function onSearchClick() {
@@ -11,11 +8,13 @@ function onSearchClick() {
     fetchGifs(query);
 }
 
+function clearInput() {
+    document.getElementById('searchInput').value = ''; 
+}
+
 function fetchGifs(query) {
     const apiKey = '768BSJJ7yudt7s9YuxYjZpjExQVm4xTu';
-    const url = query ? 
-        `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=27` :
-        `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=27`;
+    const url = `https://api.giphy.com/v1/gifs/${query ? 'search' : 'trending'}?api_key=${apiKey}&q=${query}&limit=27`;
 
     fetch(url)
         .then(response => response.json())

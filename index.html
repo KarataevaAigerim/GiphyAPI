@@ -12,14 +12,21 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 35" class="svg__icon"><g fill-rule="evenodd" clip-rule="evenodd"><path fill="#00ff99" d="M0 3h4v29H0z"></path><path fill="#9933ff" d="M24 11h4v21h-4z"></path><path fill="#00ccff" d="M0 31h28v4H0z"></path><path fill="#fff35c" d="M0 0h16v4H0z"></path><path fill="#ff6666" d="M24 8V4h-4V0h-4v12h12V8"></path><path class="shadow" d="M24 16v-4h4M16 0v4h-4"></path></g></svg>
             <div class="navbar__logo-word">GIPHY API</div>
         </div>
-        <div class="navbar__search">
-            <input type="text" id="searchInput" placeholder="Search GIFs" onkeypress="searchKeyPress(event)">
-            <button onclick="onSearchClick()" style="background: none; border: none; padding: 0; cursor: pointer;">
-                <svg id="nav__search" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                </svg>
-            </button>
-        </div>
+        <form onsubmit="handleFormSubmit(); return false;">
+            <div class="navbar__search">
+                <input type="text" id="searchInput" placeholder="Search GIFs">
+                <button  style="background: none; border: none; padding: 0; cursor: pointer;" type="submit">
+                    <svg id="nav__search" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search search-btn" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                    </svg>
+                </button>
+                <button type="button" onclick="clearInput()" class="clear-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
     </nav>
     <main class="gallery">
         <!-- GIFs  -->

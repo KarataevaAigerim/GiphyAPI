@@ -57,10 +57,9 @@ body, html {
     outline: none;
 }
 
-#nav__search {
+.search-btn {
     position: absolute;
-    right: 0.5rem;
-    top: 50%;
+    right: 8px;
     transform: translateY(-50%);
     width: 20px;
     height: 100%;
@@ -69,6 +68,19 @@ body, html {
     cursor: pointer;
     color: #333;
 }
+
+.clear-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    padding-top: 5px;
+    cursor: pointer;
+    right: 45px; 
+    color: #333;
+    background-color: transparent;
+    align-items: center;
+}
+
 
 /* gallery part */
 
